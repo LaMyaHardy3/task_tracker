@@ -2,7 +2,10 @@
 A simple task tracker in python
 
 ## Description
-A command-line task tracker application that helps you manage your study tasks. Track your tasks, set priorities, mark them as complete, and delete them when needed.
+A command-line and web-based task tracker application that helps you manage your study tasks. Track your tasks, set priorities, mark them as complete, and delete them when needed.
+
+## Live Website
+- https://moonlight-task-arcade.onrender.com/
 
 ## Features
 - **View Tasks** - Display all your tasks with their priority levels and completion status
@@ -10,6 +13,7 @@ A command-line task tracker application that helps you manage your study tasks. 
 - **Mark Complete** - Mark tasks as done
 - **Delete Tasks** - Remove tasks you no longer need
 - **Persistent Storage** - All tasks are saved to a JSON file so they persist between sessions
+- **Web UI (Moonlight Task Arcade)** - A Flask-powered browser interface for managing tasks visually
 
 ## Installation
 1. Clone the repository:
@@ -21,12 +25,23 @@ cd task_tracker
 2. Ensure you have Python 3 installed on your system
 
 ## Usage
+
+### Command-line app
 Run the application:
 ```bash
 python task_tracker.py
 ```
 
-The application will display a menu with the following options:
+### Web app (Moonlight Task Arcade)
+Run the Flask app:
+```bash
+python moonlight-task-arcade/app.py
+```
+
+Then open your browser to:
+- http://127.0.0.1:5000
+
+The command-line application will display a menu with the following options:
 
 ```
 Study Task Tracker
@@ -58,16 +73,15 @@ Study Task Tracker
 **5. EXIT** - Close the application
 
 ## File Structure
-- `task_tracker.py` - Main application file
+- `task_tracker.py` - Command-line application file
+- `moonlight-task-arcade/app.py` - Flask web application file
 - `tasks.json` - Auto-generated file storing your tasks (created after first use)
 
 ## Example Workflow
-1. Run `python task_tracker.py`
-2. Select option `2` to add a new task
-3. Enter task name: `Study Python`
-4. Enter priority: `High`
-5. Select option `1` to view all tasks
-6. Select option `3` to mark a task as complete
-7. Select option `5` to exit
+1. Run `python task_tracker.py` or `python moonlight-task-arcade/app.py`
+2. Add a new task
+3. View tasks
+4. Mark tasks complete
+5. Delete tasks as needed
 
 Your tasks are automatically saved and will be available the next time you run the application!
